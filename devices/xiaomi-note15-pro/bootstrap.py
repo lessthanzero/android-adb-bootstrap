@@ -51,7 +51,8 @@ BATTERY_WHITELIST = [
     "ru.sberbankmobile",
     "ru.sberbank.sberpay",
     # VPN Solutions
-    "io.papervpn.android.client",   # Paper VPN
+    "io.papervpn.android.app",      # Paper VPN
+    "io.papervpn.android.client",   # Paper VPN (legacy)
     "org.amnezia.vpn",             # Amnezia VPN
     "com.tinychat.vpn",
     # Wearable Companion App
