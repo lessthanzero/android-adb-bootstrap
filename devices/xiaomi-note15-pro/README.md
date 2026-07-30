@@ -38,9 +38,10 @@ Setup pipeline, debloating rules, battery optimization, and post-migration audit
 ### 3. Safe HyperOS Debloating
 Removes tracking, ads, quick app stubs, and preinstalled third-party bloat for `User 0` without breaking OTA updates, Xiaomi Camera, or Gallery:
 - **Ads & Analytics**: `com.miui.msa.global`, `com.miui.analytics`, `com.miui.daemon`
-- **Promos**: `com.miui.android.fashiongallery`, `com.xiaomi.glance.internet`
-- **Bloatware**: `com.xiaomi.mipicks` (GetApps), `com.mi.global.bbs`, `com.miui.videoplayer`, `com.mi.health`, `com.miui.player`, `com.miui.hybrid` (Quick Apps)
-- **Preinstalls**: Facebook packages (`com.facebook.system`, etc.), Netflix stubs
+- **Promos & Feeds**: `com.miui.android.fashiongallery`, `com.xiaomi.glance.internet`, `com.mi.globalminusscreen` (App Vault feed)
+- **Bloatware & Redundant Apps**: `com.xiaomi.mipicks` (GetApps), `com.mi.global.bbs`, `com.miui.videoplayer`, `com.mi.health`, `com.miui.player`, `com.miui.hybrid` (Quick Apps), `com.mi.globalbrowser` (Mi Browser), Google TV, Play Books
+- **Preinstalled Games**: Jewels Blast, Bubble Shooter, Eliminate Intruder 3D, Block Juggle, Wood Blast, Snake
+- **Third-Party Preinstalls**: Facebook packages (`com.facebook.system`, etc.), Netflix stubs
 
 ### 4. Power & Doze Whitelisting
 Prevents Doze mode background hibernation for critical applications:

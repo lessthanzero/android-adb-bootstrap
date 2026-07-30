@@ -39,7 +39,19 @@ HYPEROS_DEBLOAT_LIST = [
     "com.facebook.services",
     "com.facebook.katana",
     "com.netflix.partner.activation",
-    "com.netflix.mediaclient"
+    "com.netflix.mediaclient",
+    # Pre-installed Promotional Games & Redundant Feed Apps
+    "com.jewelsblast.ivygames.Adventure.free",
+    "com.sukhavati.gotoplaying.bubble.BubbleShooter.mint",
+    "com.logame.eliminateintruder3d",
+    "com.block.juggle",
+    "com.ordinaryjoy.woodblast",
+    "com.nf.snake",
+    "com.mi.globalminusscreen",    # App Vault Promo Feed
+    "com.mi.globalbrowser",        # Mi Browser
+    "com.google.android.videos",   # Google TV
+    "com.google.android.apps.books", # Google Play Books
+    "com.google.android.apps.subscriptions.red" # Google One Promo Stub
 ]
 
 # Apps to whitelist from background battery constraints (Crucial for VPNs & Band sync)
