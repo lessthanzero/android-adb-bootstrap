@@ -86,6 +86,25 @@ primary%3AROMs%2FGameCube%2FMetal%20Gear%20Solid%20-%20The%20Twin%20Snakes%20(Di
 
 ---
 
+## Automated Bootstrap & Config Snapshot Pipeline
+
+The Pixel 7a setup and configuration snapshot is automated via `bootstrap.py`:
+
+```bash
+python3 devices/pixel-7a/bootstrap.py
+```
+
+### Pipeline Functions
+- **Phase 1: Auditing & Sanitized Snapshotting**: Captures package lists and system/secure/global settings databases into `phone_backup/pixel-7a/` with strict redaction of sensitive identifiers (emails, MACs, serial numbers, Android IDs).
+- **Phase 2: System Defaults**: Configures 24-hour time formatting and verifies setup completion flags.
+- **Phase 3: Safe Debloating**: Uninstalls safe bloatware/retail demo stubs for User 0 (`com.google.android.retaildemo`, `com.verizon.mips.services`, etc.).
+- **Phase 4: Privacy & Battery Hardening**: Disables ad tracking and background telemetry while whitelisting emulators (Beacon, Vita3K, Flycast, Dolphin, Lime3DS, PPSSPP), VPNs, security tools, and messaging apps from Doze mode.
+- **Phase 5: Local APK Installs**: Automatically deploys any `.apk` packages placed inside `./apks/`.
+- **Phase 6: UI Tuning**: Forces Dark Mode system-wide and softens haptic feedback.
+- **Phase 7: Report Generation**: Writes execution summary to `devices/pixel-7a/bootstrap-report.md`.
+
+---
+
 ## Staging & Sync Workflow (`phone-transfer`)
 
 You can optionally maintain a transient staging directory on your Mac (e.g. `$HOME/phone-transfer/staging/`) for queueing games before pushing to the phone:
@@ -99,3 +118,4 @@ You can optionally maintain a transient staging directory on your Mac (e.g. `$HO
    ```bash
    NAS_DIR=/Volumes/ROMs ./scripts/backup_to_nas.sh
    ```
+

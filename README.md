@@ -18,6 +18,7 @@ An open-source repository containing isolated ADB bootstrap pipelines, HyperOS d
     │
     └── pixel-7a/                       # Google Pixel 7a (Handheld & Emulation Lab)
         ├── README.md                   # Android SAF URI rules, Beacon Launcher & Emulator guide
+        ├── bootstrap.py                # Automated ADB setup, config snapshot & battery hardening
         └── scripts/
             ├── push_to_pixel.sh        # Deployment script for ROMs, stubs, and platform configs
             └── backup_to_nas.sh        # Backup script pulling phone saves/ROMs to local/NAS storage
@@ -36,6 +37,7 @@ Targeted setup for system debloating, background battery optimization for VPNs/w
 ### 2. Google Pixel 7a (Emulation & ADB Management)
 Configuration guide and automation scripts for handheld emulation (Beacon Launcher, Vita3K, Lime3DS/Azahar, Flycast, Dolphin) on 64-bit Android.
 - [Pixel 7a Emulation & Setup Documentation](devices/pixel-7a/README.md)
+- **Bootstrap & Snapshot Script**: [`devices/pixel-7a/bootstrap.py`](devices/pixel-7a/bootstrap.py)
 - **ADB Push Deployment**: [`devices/pixel-7a/scripts/push_to_pixel.sh`](devices/pixel-7a/scripts/push_to_pixel.sh)
 - **Phone-to-NAS Backup**: [`devices/pixel-7a/scripts/backup_to_nas.sh`](devices/pixel-7a/scripts/backup_to_nas.sh)
 
